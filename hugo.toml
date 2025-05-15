@@ -3,6 +3,95 @@ languageCode = 'en-us'
 title = 'Giacomo Rosin'
 theme = "hugo-blog-awesome"
 
+enableEmoji = true
+# ignoreErrors = ["additional-script-loading-error"] # ignore error of loading additional scripts.
+
+
+
+[menu]
+  [[menu.main]]
+    # The page reference (pageRef) is useful for menu highlighting
+    # When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
+    pageRef = "/"
+    name = "home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    pageRef = "posts"
+    name = "posts"
+    url = "/posts/"
+    weight = 20
+  [[menu.main]]
+    pageRef = "about"
+    name = "about"
+    url = "/about"
+    weight = 30
+
+
+
+
+
+[services]
+# To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
+# To disable Google Analytics, simply leave the field empty or remove the next two lines
+  [services.googleAnalytics]
+    id = '' # G-MEASUREMENT_ID
+
+# To enable Disqus comments, provide Disqus Shortname below.
+# To disable Disqus comments, simply leave the field empty or remove the next two lines
+  [services.disqus]
+    shortname = ''
+
+  [services.rss]
+    limit = -1
+
+# set markup.highlight.noClasses=false to enable code highlight
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+	[markup.tableOfContents]
+		startLevel = 2 # ToC starts from H2
+		endLevel = 4 # ToC ends at H4
+		ordered = false # generates <ul> instead of <ol>
+
+[params]
+  goToTop = true
+
+# Allow to override `browserconfig.xml` params (configuration for windows embedded browsers)
+[params.browserconfig]
+  TileColor = "#2d89ef" # default windows 10 blue tile color
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/jackroi"
+
+# [[params.socialIcons]]
+# name = "cv"
+# url = ""
+
+# [[params.socialIcons]]
+# name = "email"
+# url = ""
+
+# googlescholar
+# instagram
+# linkedin
+# paypal
+# reddit
+# strava
+# x
+
+# [[params.socialIcons]]
+# name = "twitter"
+# url = "https://twitter.com"
+
+[[params.socialIcons]]
+name = "Rss"
+url = "/index.xml"
+
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
